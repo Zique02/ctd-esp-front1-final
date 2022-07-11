@@ -6,7 +6,7 @@ import "./cabecalho.css";
  *
  * Uso: `<Cabecalho />`
  *
- * @returns {JSX.Element}
+ * @returns {tsx.Element}
  */
 const Cabecalho = () => {
   return (

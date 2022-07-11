@@ -1,5 +1,6 @@
 import React from 'react';
-import { Routes, Route } from "react-router-dom";
+//@ts-ignore
+import { Routes, Route, BrowserRouter } from "react-router-dom";
 import './App.css';
 import PaginaInicio from "./paginas/Inicio.pagina";
 import PaginaFavoritos from "./paginas/Favoritos.pagina";
@@ -9,12 +10,14 @@ import Cabecalho from "./componentes/layout/cabecalho.componente";
 function App() {
   return (
     <div className="App">
-      <Cabecalho />
-      <Routes>
-        <Route path="/" element={<PaginaInicio />} />
-        <Route path="favoritos" element={<PaginaFavoritos />} />
-        <Route path="detalhe" element={<PaginaDetalhe />} />
-      </Routes>
+      <BrowserRouter>
+        <Cabecalho />
+        <Routes>
+          <Route path="/" element={<PaginaInicio />} />
+          <Route path="favoritos" element={<PaginaFavoritos />} />
+          <Route path="detalhe/:id" element={<PaginaDetalhe />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

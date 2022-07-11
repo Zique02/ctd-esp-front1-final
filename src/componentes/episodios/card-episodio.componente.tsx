@@ -6,15 +6,20 @@ import "./card-episodio.css";
  * Você precisará adicionar as propriedades necessárias para exibir os dados dos episódios
  *
  *
- * @returns Elemento JSX
+ * @returns Elemento tsx
  */
-const CardEpisodio = () => {
+interface iCardEpisodioProps {
+  name: string;
+  episode: string;
+  lancamento: string;
+}
+const CardEpisodio = ({episode, name, lancamento}:iCardEpisodioProps) => {
   return (
     <div className="card-episodio">
-      <h4>Close Rick-counters of the Rick Kind</h4>
+      <h4>{name}</h4>
       <div>
-        <span>S01E01</span>
-        <span>Lançado em: April 7, 2014</span>
+        <span>{episode}</span>
+        <span>Lançado em: {lancamento}</span>
       </div>
     </div>
   );
