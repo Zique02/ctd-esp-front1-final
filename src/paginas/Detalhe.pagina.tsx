@@ -138,10 +138,9 @@ const PaginaDetalhe = () => {
   return (
     <>
       <Helmet>
-        <title>Rick and morty | Nome</title>
+        <title>Catálogo | Detalhes</title>
       </Helmet>
       <div className="container">
-        <h3>Rick Sanchez</h3>
         <div className={"detalhe"}>
           <div className={"detalhe-header"}>
             <img

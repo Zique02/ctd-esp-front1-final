@@ -45,7 +45,7 @@ const PaginaInicio = () => {
   return (
     <>
     <Helmet>
-      <title>Rick and morty</title>
+      <title>Catálogo do Rick and Morty</title>
     </Helmet>
       <div className="container">
         <div className="actions">

@@ -18,8 +18,8 @@ const CardEpisodio = ({episode, name, lancamento}:iCardEpisodioProps) => {
     <div className="card-episodio">
       <h4>{name}</h4>
       <div>
+        <span>Lançado em:{lancamento}</span>
         <span>{episode}</span>
-        <span>Lançado em: {lancamento}</span>
       </div>
     </div>
   );

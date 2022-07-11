@@ -19,7 +19,7 @@ const PaginaFavoritos = () => {
   return (
     <>
     <Helmet>
-      <title>Rick and morty | favoritos</title>
+      <title>Catálogo | Favoritos</title>
     </Helmet>
       <div className="container">
         <div className="actions">
