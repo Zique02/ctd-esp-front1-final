@@ -10,7 +10,7 @@ import { resetFavs } from "../store/actions/favorite";
  * Uso:
  * ``` <PaginaFavoritos /> ```
  *
- * @returns Página de favoritos
+ * @returns Página contendo todos os personagens favoritos
  */
 const PaginaFavoritos = () => {
   const { favoritos } = useSelector(({ fetchFavorites }) => fetchFavorites)

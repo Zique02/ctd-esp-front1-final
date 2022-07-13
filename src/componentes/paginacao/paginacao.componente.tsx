@@ -1,18 +1,16 @@
 import "./paginacao.css";
 
-/**
- * Componente que contém os botões para paginar
- *
- * Você deve adicionar as propriedades necessárias para que funcione corretamente
- *
- *
- * @returns Elemento tsx
- */
 interface iPaginacaoProps {
   page: number,
   disabledNext: boolean,
   onChange: (page: number) => void
 }
+/**
+ * @property {number} page
+ * @property {boolean} disabledNext
+ * @property {(page: number) => void} onChange
+ * @returns Botões de paginação
+ */
 const Paginacao = ({ page, disabledNext, onChange }: iPaginacaoProps) => {
 
   return (

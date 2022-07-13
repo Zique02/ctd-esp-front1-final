@@ -1,6 +1,6 @@
 export interface iEpisode {
-    id: number;
-    name: string;
-    lancamento: string;
-    episode: string;
+    id:         number;
+    name:       string;
+    created:    string;
+    episode:    string;
 }

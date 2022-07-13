@@ -6,6 +6,12 @@ const initalState = {
     favoritos: []
 }
 
+/**
+ * Responsavel gereciar chamadas ao state local de Favoritos e retornar os dados
+ * @param state - estado atual do reducer
+ * @param action - action que será executada
+ * @returns retorna o novo estado do reducer
+ */
 export const fetchFavoritesReducer = (state = initalState, action: iAction) => {
     switch (action.type) {
         case ADD_FAV:

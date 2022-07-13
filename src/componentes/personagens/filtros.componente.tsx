@@ -4,7 +4,10 @@ interface iFiltros {
   title: string;
   handleFilter: (title: string) => void;
 }
-
+/**
+ * @property {(title: string) => void} handleFilter funcão que recebe o título do filtro e filtra os personagens
+ * @returns 
+ */
 const Filtros = ({ title, handleFilter }: iFiltros) => {
 
   return (

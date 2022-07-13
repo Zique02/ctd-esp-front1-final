@@ -1,5 +1,5 @@
 export interface iAction {
-    type: string,
+    type:   string,
     payload: any
 }
 export interface IRootState {

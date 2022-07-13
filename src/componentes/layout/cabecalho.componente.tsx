@@ -24,7 +24,7 @@ const Cabecalho = () => {
               <Link to="/favoritos">Favoritos</Link>
             </li>
             <li>
-              <Link to="/detalhe">Detalhe</Link>
+              <Link to="/detalhe/1">Detalhe</Link>
             </li>
           </ul>
         </nav>

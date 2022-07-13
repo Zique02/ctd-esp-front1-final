@@ -1,25 +1,25 @@
 import "./botao-favorito.css";
 import Star from '../../assets/star.svg';
 import StarFilled from '../../assets/star-filled.svg';
-/**
- * Botão que indica se um elemento é favorito ou não, e dá a possibilidade de marcá-lo/desmarcá-lo
- *
- * Terá que tipar as propriedades se utilizar este componente
- *
- *
- * @returns Elemento tsx
- */
+import { MouseEvent } from "react";
 
 interface iBotaoFavorito {
   isFavorito: boolean;
-  onClick: (id: number) => void;
-  id: number;
+  onClick: (e: MouseEvent<HTMLDivElement>) => void;
 }
-const BotaoFavorito = ({ isFavorito, onClick, id }: iBotaoFavorito) => {
+/**
+ * Botao de favorito
+ * @property {isFavorito} boolean - Propriedade que indica se o personagem está favorito
+ * @property {(e) => void} onClick - Função responsavel por marcar ou desmarcar o personagem como favorito
+ * uso:
+ * ``` <BotaoFavorito /> ```
+ * @returns Botão de favorito
+ */
+const BotaoFavorito = ({ isFavorito, onClick}: iBotaoFavorito) => {
   const src = isFavorito ? StarFilled : Star;
 
   return (
-    <div onClick={() => onClick(id)} className="botao-favorito">
+    <div onClick={(e) => onClick(e)} className="botao-favorito">
       <img src={src} alt={"favorito"} />
     </div>
   );

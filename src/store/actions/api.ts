@@ -4,12 +4,21 @@ export const FETCH_START = 'FETCH_START';
 export const FETCH_ERROR = 'FETCH_ERROR';
 export const FETCH_SUCCESS = 'FETCSUCCESS';
 
+
+/**
+ * Responsavel por dar o inicio ao fetch
+ */
 export const fetchCharactersStart = () => {
     return {
-        type: FETCH_START
+        type: FETCH_START,
+        payload: {}
     }
 }
 
+/**
+ * Responsavel por retornar uma mensagem de erro caso ocorra algum erro na requisição
+ * @param messageError Menssagem de erro a ser exibida
+ */
 export const fetchCharactersError = (messageError: string) => {
     return {
         type: FETCH_ERROR,
@@ -17,6 +26,11 @@ export const fetchCharactersError = (messageError: string) => {
     }
 }
 
+/**
+ * Responsavel por fazer a chamada a API e retornar os dados
+ * @param response - resposta API
+ * @returns 
+ */
 export const fetchCharactersSucess = (response: {}) => {
     return {
         type: FETCH_SUCCESS,

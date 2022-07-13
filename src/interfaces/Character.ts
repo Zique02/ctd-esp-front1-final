@@ -13,6 +13,6 @@ export interface ICharacter {
     created:  Date;
   }
 interface Location {
-name: string;
-url:  string;
+    name:     string;
+    url:      string;
 }

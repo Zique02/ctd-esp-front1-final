@@ -28,15 +28,27 @@ const PaginaInicio = () => {
     fetchCharactersThunk(dispatch, page);
   }, [page])
 
+  /**
+   * Função que executa a chamada a APi quando o usuário clica no botão de filtrar.
+   * @param e - Evento de submit do formulário
+   */
   const searchByNameCharacter = (e: FormEvent) => {
     e.preventDefault()
     fetchCharacterByName(dispatch, titleFilter)
   }
 
+  /**
+   * Função para mudar a página
+   * @param page Número da página
+   */
   const handlePage = (page: number) => {
     setPage(page);
   }
 
+  /**
+   * Função para filtrar a pesquisa pelo nome do personagem
+   * @param title Nome do personagem
+   */
   const handleTitleFilter = (title: string) => {
     setTitleFilter(title)
   }
@@ -45,7 +57,7 @@ const PaginaInicio = () => {
   return (
     <>
     <Helmet>
-      <title>Catálogo do Rick and Morty</title>
+      <title>Catálogo Rick and Morty</title>
     </Helmet>
       <div className="container">
         <div className="actions">
